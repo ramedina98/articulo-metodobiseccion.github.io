@@ -1,0 +1,347 @@
+<!--This html sheet contains the complete information of 
+the Babylonian method, it has part of its history, how 
+it works, what it is usually used for and it also has the 
+flowchart I used to design it...-->
+
+<!--Este cometario lo escribo para validar que si esta jalando todo bien...-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Bisección || Métodos Numericos</title>
+    <link rel="shortcut icon" href="imagenes/biseccion.ico">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.3/glider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="#">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:ital,wght@0,500;1,300&family=Creepster&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--El encabezado de la pagina..-->
+    <header>
+        <div class="call_to">
+            <div class="news_letter_a">
+                <a href="#">suscríbete al newsletter</a>
+            </div>
+            <div class="uned_plus">
+                <a href="#">unedl+</a>
+            </div>
+        </div>
+        <div class="cont_all">
+            <!--Left-->
+            <div class="cont_title_materia">
+                <h2>MÉTODOS NUMERICOS</h2>
+            </div>
+            <!--Right-->
+            <div class="cont_btns_right">
+                <nav class="btn_inicio">
+                    <a href="https://ramedina98.github.io/metodos-numericos.github.io/" class="aa">Inicio</a>
+                </nav>
+                <!--Aquí falta terminar de hacer bien el boton de dark mode
+                a su vez falta que le acomodemos el estilo general al header,
+                hay que buscar la pagina que nos ayudo con el estilo de la pagina 
+                principal...-->
+                <div class="cont_btn_dark">
+                    <button class="switch" id="switch">
+                        <img src="imagenes/sunny.png" alt="">
+                        <img src="imagenes/moon.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Aqui va la información más importante...-->
+    <main>
+        <!--En este div tenemos lo que el titulo con información importante 
+        el separador de imagen y demas...-->
+        <div class="up">
+            <div class="separador">
+                <!--Solo contiene un pequeño elemento que tiene el titulo de que materia es...-->
+                <div class="cont_btn_materia">
+                    <div class="btn_materia">
+                        <p>
+                            Matemáticas
+                        </p>
+                    </div>
+                </div>
+                <!--Aqui tendremos un titulo en grande, como estilo de click byte...-->
+                <div class="titulo_atractivo">
+                    <h1>
+                        "El Método de Bisección: Un Clásico para Resolver Ecuaciones No Lineales"
+                    </h1>
+                </div>
+                <!--Aquí estara el subtitulo...-->
+                <div class="sub_titulo">
+                    <h3>
+                        Explorando los fundamentos, avances y aplicaciones del método 
+                        matemático más antiguo
+                    </h3>
+                </div>
+                <!--Aqui tenemos información de quien escribio el articulo y fecha de publicación...-->
+                <div class="cont_info">
+                    <div class="autor">
+                        <h3>
+                            Por <span>rangel garcia perez</span>
+                        </h3>
+                    </div>
+                    <div class="fecha">
+                        <h3>
+                            publicado <span>18 de junio 2023, 13:00 gmt-2</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!--Este div tiene una imagen como encabezado...-->
+            <div class="img_encabezado"></div>
+            <!--Este div es el pie de foto...-->
+            <div class="cont_des_img">
+                <div class="des_img">
+                    <p>
+                        En la búsqueda de la bisección 
+                    </p>
+                    <span>
+                        fotografía de <a href="">Dan Cristian Paduret</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--En este div tenemos lo que vendria siedo el articulo principal y 
+        el aside: donde tendremos otras cartas con info de los otros metodos
+        vistos en clase, estilo nat geo-->
+        <div class="dow">
+            <!--Articulo principla...-->
+            <div class="articulo">
+                <p>
+                    En el vasto universo de las matemáticas, existen múltiples métodos para resolver 
+                    <span class="green_line">ecuaciones no lineales</span>. Uno de los enfoques más antiguos y confiables es el 
+                    <b><span class="green_line">Método de Bisección.</span></b> Aunque ha sido superado en gran medida por algoritmos más 
+                    sofisticados, el Método de Bisección sigue siendo una herramienta valiosa en 
+                    determinadas situaciones y un testimonio de la solidez de los métodos clásicos. 
+                    En este artículo, exploraremos detalladamente el Método de Bisección, desde sus 
+                    inicios hasta sus aplicaciones actuales. 
+                </p>
+                <h2>
+                    El Surgimiento del Método de Bisección
+                </h2>
+                <p>
+                    <b>Los Primeros Pasos: </b><span class="green_line">El Método de Bisección</span> tiene sus raíces en la <b>antigua 
+                    Grecia</b>, cuando los matemáticos griegos buscaban formas de resolver ecuaciones 
+                    algebraicas. Sin embargo, fue en el <b>siglo XIV</b> cuando el matemático francés <b>Nicolas 
+                    Chuquet</b> introdujo una forma primitiva del Método de Bisección en su obra "Triparty 
+                    en la Science des Nombres". Chuquet utilizó este método para encontrar raíces de 
+                    ecuaciones polinómicas y sentó las bases para futuros avances.
+                </p>
+                <p>
+                    <b>Perfeccionamiento por los Matemáticos Renacentistas: </b>Durante el Renacimiento, 
+                    matemáticos como <span class="green_line">François Viète y Rafael Bombelli</span> perfeccionaron y ampliaron el <b>Método de 
+                    Bisección</b>. Viète, reconocido por su trabajo en álgebra, estableció los fundamentos del método 
+                    y lo aplicó en la resolución de ecuaciones cúbicas y cuárticas. Bombelli, por su parte, 
+                    desarrolló el Método de Bisección en el contexto de las <span class="green_line">ecuaciones polinómicas complejas</span>.
+                </p>
+                <!--Agregamos dos imagenes relacionadas a los prrafos de arriba y tambien agregamos
+                sus descripciones...-->
+                <div class="cont_imagenes">
+                    <div class="imagenes">
+                        <div class="fotos" id="Francois"></div>
+                        <div class="fotos" id="Rafael"></div>
+                    </div>
+                    <div class="descripcion">
+                        <p>
+                            <span class="gone">Izquierda: </span>Foto de François Viète: Quien fuera un abogado y 
+                            matemático francés. Uno de los principales precursores del álgebra. (1540 - 1603)
+                            <br>
+                            <span class="photo_author">foto del archivo fotográfico de parís.</span>
+                        </p>
+                        <p class="out">
+                            <span>Derecha: </span>Rafael Bombelli: Fue un matemático e ingeniero hidraúlico italiano.
+                            Su Álgebra fue uno de los textos más relevantes en <span class="green_line">Europa</span>.
+                            (1526 - 1572)
+                            <br>
+                            <span class="photo_author">foto: del archivo fotográfico de milan.</span>
+                        </p>
+                    </div>
+                </div>
+                <!--End-->
+                <h2 class="less_margin">
+                    Cómo Funciona el Método de Bisección
+                </h2>
+                <p>
+                    El <span class="green_line">Método de Bisección</span> se basa en el <b>Teorema de Bolzano</b>, el cual establece que 
+                    si una función continua cambia de signo en un intervalo, entonces tiene al menos 
+                    una raíz en ese intervalo. El método divide repetidamente el intervalo en dos 
+                    partes iguales y determina en cuál de las mitades se encuentra la raíz.
+                </p>
+                <p>
+                    <b> El Proceso Iterativo: </b>El Método de Bisección comienza con un intervalo 
+                    inicial que contiene la raíz buscada. Luego, se evalúa la función en el punto 
+                    medio del intervalo y se verifica si la función cambia de signo en ese punto. 
+                    Dependiendo del resultado, se selecciona la mitad del intervalo en la cual ocurre 
+                    el cambio de signo y se repite el proceso hasta alcanzar la precisión deseada.
+                </p>
+                <p>
+                    <b>Ventajas y Limitaciones: </b>El Método de Bisección presenta varias ventajas, como 
+                    su simplicidad y su garantía de convergencia si se cumplen ciertas condiciones. Sin 
+                    embargo, también tiene limitaciones, como la necesidad de contar con un intervalo 
+                    inicial que contenga la raíz y su relativa lentitud en comparación con métodos más 
+                    avanzados.
+                </p>
+                <h2>
+                    Aplicaciones Actuales del Método de Bisección
+                </h2>
+                <p>
+                    <b>Matemáticas y Análisis Numérico: </b>Aunque el <span class="green_line">Método de Bisección</span> ha sido 
+                    ampliamente superado por algoritmos más eficientes, aún encuentra aplicaciones en 
+                    las <b>matemáticas y el análisis numérico</b>. Por ejemplo, puede ser útil cuando se 
+                    requiere una solución aproximada y no se dispone de herramientas computacionales 
+                    avanzadas. Además, el Método de Bisección sigue siendo una herramienta pedagógica 
+                    valiosa para enseñar conceptos matemáticos fundamentales y lógica de programación.
+                </p>
+                <p>
+                    <b>Optimización y Búsqueda de Raíces: </b>El Método de Bisección también se utiliza 
+                    en problemas de <span class="green_line">optimización y búsqueda de raíces</span>, donde se busca encontrar el máximo 
+                    o mínimo de una función o determinar los puntos en los que una función se anula. En 
+                    combinación con otros métodos, el Método de Bisección puede ser parte de un enfoque 
+                    integral para resolver problemas complejos en campos como <b>la ingeniería, la economía y 
+                    la física</b>.
+                </p>
+                <p>
+                    <b>Implementaciones en Software: </b>Aunque el Método de Bisección no es la opción 
+                    predeterminada en la mayoría de los software de cálculo científico, sigue siendo implementado 
+                    en algunos programas matemáticos y hojas de cálculo. Esto permite a los usuarios aplicar el 
+                    Método de Bisección de manera rápida y sencilla sin tener que desarrollar su propia 
+                    implementación.
+                </p>
+                <h2>
+                    En conclusión
+                </h2>
+                <!--Checar aun si hay algunas cosas a las cuales ponerles span o b...-->
+                <p>
+                    A pesar de su antigüedad, el Método de Bisección sigue siendo relevante en el 
+                    mundo de las matemáticas y la resolución de ecuaciones no lineales. Aunque ha 
+                    sido reemplazado en muchos casos por métodos más rápidos y eficientes, el Método 
+                    de Bisección conserva su importancia histórica y su valor como herramienta 
+                    pedagógica. Su simplicidad y garantía de convergencia en ciertos casos lo 
+                    convierten en una opción a considerar en diversas aplicaciones. En última 
+                    instancia, el Método de Bisección es un recordatorio de la solidez de los métodos 
+                    clásicos y su vigencia en el amplio espectro de las matemáticas.
+                </p>
+            </div>
+            <!--Aquí esta el sider...-->
+            <div class="aside">
+                <!--Aquí tendremos una zona en donde saldran imagenes
+                como si fueran publicidad. Tambien tienen que cambiar
+                cada cierto tiempo, pero esto sera con el reloj...cada
+                minuto por lo menos...-->
+                <div class="cont_publicidad"></div>
+                <!--Zona donde estan las otras cartas de articulos
+                Estaria chido programar esto tambien en JS para que
+                cada vez que se refresque la pagina cambien los
+                articulos que salen ahi. Notodos tendran su pagina
+                pero se pueden redireccionar a otros lados...Hay prcaticar
+                con los JSON...-->
+                <div class="cont_otros_articulos">
+                    <!--Este primer div es el titulo del aside...-->
+                    <div class="encabezado">
+                        <h2 class="lineas">
+                            métodos numericos 
+                        </h2>
+                    </div>
+                    <!--Here are all the articles, they are being 
+                    generated with JS-->
+                    <div class="cont_car_all"></div>
+                </div>
+                <div class="cont_btnvermas">
+                    <button class="vermas">ver más</button>
+                </div>
+            </div>
+        </div>
+        <!--Esta zona es para poner etiquetas relacionadas al 
+        tema, las cuales te redireccionan a articulos con tema 
+        similar...-->
+        <div class="cont_etiquetas">
+            <div class="cont_btn_docu">
+                <a href="https://www.youtube.com/watch?v=sFMK3v879kg" class="btn_docu">mira el documental completo en youtube</a>
+            </div>
+            <!--Hay que generar esto con codigo JS-->
+            <div class="etiquetas">
+                <a href="https://www.nationalgeographicla.com/search?q=matematicas" class="etiqueta">matemática</a>
+                <a href="https://www.nationalgeographicla.com/historiaycultura" class="etiqueta">historia</a>
+                <a href="https://www.nationalgeographicla.com/search?q=civilizaciones%20antiguas" class="etiqueta">civilizaciones antiguas</a>
+                <a href="https://www.nationalgeographicla.com/search?q=civilizaciones" class="etiqueta">civilizaciones</a>
+            </div>
+        </div>
+    </main>
+    <!--Aqui iniciamos con el pie de pagina...-->
+    <footer>
+        <!--Este div contiene todo lo relacionado a más temas, cosas sobre la empresa, subscripciones
+        redes y más...-->
+        <div class="redes_mas_nosotros">
+            <div class="cont_ligas">
+                <ul>
+                    <li class="titulo_ligas">descubre más nat</li>
+                    <li><a href="#">Animales</a></li>
+                    <li><a href="#">Medio ambiente</a></li>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Ciencia</a></li>
+                    <li><a href="#">Viajes</a></li>
+                    <li><a href="#">Fotografía</a></li>
+                    <li><a href="#">Espacio</a></li>
+                    <li><a href="#">Video</a></li>
+                </ul>
+            </div>
+            <div class="cont_ligas">
+                <ul>
+                    <li class="titulo_ligas">sobre nosotros</li>
+                    <li><a href="#">Temas, autores y fotografos</a></li>
+                    <li><a href="#">Undl Partners</a></li>
+                    <li><a href="#">Unedl Society</a></li>
+                    <li><a href="#">Exploradores</a></li>
+                </ul>
+            </div>
+            <div class="cont_ligas">
+                <ul>
+                    <li class="titulo_ligas">subscripción</li>
+                    <li><a href="#">Registrate en nuestro newsletter</a></li>
+                    <li><a href="#">Undl+</a></li>
+                </ul>
+            </div>
+            <div class="cont_ligas">
+                <div class="cont_titulo_ligas">
+                    <h2>síguenos</h2>
+                </div>
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-flipboard"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--Este div contiene politicas de privacidad, copy right y más cosas relacionadas a eso...-->
+        <div class="copy_politicas">
+            <div class="politicas">
+                <div class="links"><a>Condiciones de Uso</a></div>
+                <div class="links"><a>Política de Privacidad</a></div>
+                <div class="links"><a>Anuncios basados en tu interés</a></div>
+            </div>
+            <div class="copy">
+                <p>
+                    COPYRIGHT © 1990-2015 NATIONAL ENRIQUE DIAZ DE LEON. COPYRIGHT © 2015-2023 
+                    ENRIQUE DIAZ PARTNERS, LLC. TODOS LOS DERECHOS RESERVADOS
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--Archivos de JS-->
+    <script src="JS/main.js"></script>
+</body>
+</html>
